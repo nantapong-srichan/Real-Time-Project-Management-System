@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PatrolPrep — Real-time learning command center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand"><div class="brand-mark">P</div><div><strong>patrolprep</strong><span>academy OS</span></div></div>
+        <div class="workspace-switcher"><span class="status-dot"></span><span>Student workspace</span><span class="chevron">⌄</span></div>
+        <nav>
+          <p class="nav-label">Workspace</p>
+          <button class="nav-item active" data-view="overview"><span>⌂</span> ภาพรวม <kbd>1</kbd></button>
+          <button class="nav-item" data-view="courses"><span>▣</span> คอร์สของฉัน</button>
+          <button class="nav-item" data-view="exams"><span>◫</span> ห้องสอบออนไลน์</button>
+          <button class="nav-item" data-view="schedule"><span>◷</span> ตารางเรียนสด</button>
+          <p class="nav-label">Progress</p>
+          <button class="nav-item" data-view="analytics"><span>↗</span> วิเคราะห์ผลสอบ</button>
+          <button class="nav-item" data-view="library"><span>▤</span> เอกสารการเรียน</button>
+        </nav>
+        <div class="sidebar-bottom"><div class="support-card"><span class="support-icon">✦</span><div><strong>ต้องการความช่วยเหลือ?</strong><small>คุยกับทีมติวเตอร์ได้เลย</small></div><button>→</button></div><div class="user-mini"><div class="avatar">น</div><div><strong>นที พัฒนกิจ</strong><small>Member · Pro plan</small></div><button>•••</button></div></div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="breadcrumb">ภาพรวม</strong></div><div class="top-actions"><button class="icon-button" title="ค้นหา">⌕</button><button class="icon-button notification" title="การแจ้งเตือน">♢<i></i></button><div class="top-avatar">น</div></div></header>
+
+        <section class="view active-view" id="overview">
+          <div class="hero-row"><div><p class="eyebrow">MONDAY, 26 OCTOBER 2026 <span class="live-pill"><i></i> LIVE SYNC</span></p><h1>สวัสดีครับ นที <span>✦</span></h1><p class="subheading">วันนี้คุณมีเป้าหมายเล็ก ๆ ที่จะพาไปถึงเส้นชัยใหญ่ขึ้น</p></div><button class="primary-btn" data-view-target="exams">เริ่มทำข้อสอบ <span>→</span></button></div>
+          <div class="stats-grid"><div class="stat-card"><div class="stat-icon purple">◒</div><span>ความคืบหน้ารวม</span><strong>68%</strong><div class="progress"><i style="width:68%"></i></div><small><b>+8%</b> จากสัปดาห์ที่แล้ว</small></div><div class="stat-card"><div class="stat-icon orange">◷</div><span>เวลาเรียนสะสม</span><strong>24.5 <em>ชม.</em></strong><small><b>+3.2 ชม.</b> ในสัปดาห์นี้</small></div><div class="stat-card"><div class="stat-icon teal">✎</div><span>คะแนนเฉลี่ยข้อสอบ</span><strong>78.4 <em>/ 100</em></strong><small><b>Top 18%</b> ของผู้เรียนทั้งหมด</small></div><div class="stat-card"><div class="stat-icon blue">♧</div><span>วันที่เรียนต่อเนื่อง</span><strong>12 <em>วัน</em></strong><small>เป้าหมายถัดไป <b>14 วัน</b></small></div></div>
+
+          <div class="section-heading"><div><p class="eyebrow">YOUR NEXT MOVE</p><h2>เรียนต่อจากที่ค้างไว้</h2></div><button class="text-btn" data-view-target="courses">ดูคอร์สทั้งหมด →</button></div>
+          <div class="course-grid"><article class="course-card featured"><div class="course-art"><span class="course-tag">กำลังเรียน</span><div class="art-lines"></div><strong>LAW<br/><em>101</em></strong><small>กฎหมายเบื้องต้น</small></div><div class="course-body"><div class="course-meta"><span>บทที่ 04 / 12</span><span>42%</span></div><h3>กฎหมายอาญา &amp; วิธีพิจารณา</h3><p>บทเรียนล่าสุด: การกระทำโดยเจตนา</p><div class="progress"><i style="width:42%"></i></div><button class="outline-btn">เรียนต่อ <span>→</span></button></div></article><article class="course-card"><div class="course-art green"><span class="course-tag">แนะนำสำหรับคุณ</span><strong>ภาษา<br/><em>ไทย</em></strong><small>หลักภาษาและการอ่านจับใจความ</small></div><div class="course-body"><div class="course-meta"><span>8 บทเรียน</span><span>4.8 ★</span></div><h3>ภาษาไทยพิชิตข้อสอบ</h3><p>คอร์สนี้ช่วยเพิ่มคะแนนเฉลี่ย +14%</p><button class="outline-btn">ดูรายละเอียด <span>→</span></button></div></article></div>
+
+          <div class="lower-grid"><div class="panel schedule-panel"><div class="panel-heading"><div><p class="eyebrow">UP NEXT</p><h2>ตารางเรียนสด</h2></div><button class="icon-button">•••</button></div><div class="schedule-item"><div class="time">19:00<br><small>วันนี้</small></div><div class="schedule-line purple-line"></div><div class="schedule-info"><span class="live-label">● กำลังจะเริ่ม</span><h3>ติวเข้มภาษาอังกฤษ: Error Identification</h3><p>ครูมาร์ค · ห้อง Live 01</p></div><button class="join-btn">เข้าห้องเรียน</button></div><div class="schedule-item"><div class="time">10:00<br><small>พรุ่งนี้</small></div><div class="schedule-line orange-line"></div><div class="schedule-info"><span class="muted-label">UPCOMING</span><h3>ตะลุยโจทย์กฎหมาย 100 ข้อ</h3><p>ครูเอก · ห้อง Live 02</p></div><button class="icon-button">→</button></div></div><div class="panel streak-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR STREAK</p><h2>รักษาไฟให้ต่อเนื่อง</h2></div><span class="flame">♨</span></div><div class="streak-number">12 <small>วัน</small></div><div class="week"><span>จ<br><i class="done">✓</i></span><span>อ<br><i class="done">✓</i></span><span>พ<br><i class="done">✓</i></span><span>พฤ<br><i class="done">✓</i></span><span>ศ<br><i class="today">•</i></span><span>ส<br><i></i></span><span>อา<br><i></i></span></div><p>อีก 2 วันจะปลดล็อก <b>Badge: Iron Will</b></p></div></div>
+          <footer><span>© 2026 PatrolPrep Academy</span><span>ระบบทำงานปกติ <i class="status-dot"></i></span></footer>
+        </section>
+
+        <section class="view" id="courses"><div class="page-title"><div><p class="eyebrow">LEARNING LIBRARY</p><h1>คอร์สของฉัน</h1><p class="subheading">จัดการเส้นทางการเรียนรู้ของคุณในที่เดียว</p></div><button class="primary-btn">ค้นหาคอร์สใหม่ <span>+</span></button></div><div class="course-list"><article class="wide-course"><div class="mini-art purple-art">LAW<br><em>101</em></div><div><span class="live-label">กำลังเรียน · 42%</span><h2>กฎหมายอาญา &amp; วิธีพิจารณา</h2><p>บทเรียน 4 จาก 12 · เรียนล่าสุดเมื่อ 2 ชั่วโมงที่แล้ว</p><div class="progress"><i style="width:42%"></i></div></div><button class="outline-btn">เรียนต่อ →</button></article><article class="wide-course"><div class="mini-art green-art">TH<br><em>101</em></div><div><span class="muted-label">ยังไม่เริ่ม</span><h2>ภาษาไทยพิชิตข้อสอบ</h2><p>วิดีโอ 18 บท · แบบฝึกหัด 6 ชุด</p></div><button class="outline-btn">เริ่มเรียน →</button></article></div></section>
+
+        <section class="view" id="exams"><div class="page-title"><div><p class="eyebrow">EXAM ENGINE</p><h1>ห้องสอบออนไลน์</h1><p class="subheading">ฝึกทำข้อสอบเสมือนจริง พร้อมวิเคราะห์จุดแข็ง-จุดอ่อน</p></div><span class="pro-badge">PRO ACCESS · ACTIVE</span></div><div class="exam-hero"><div><span class="live-label">แนะนำสำหรับวันนี้</span><h2>Mock Exam #04<br><em>ชุดรวมทุกวิชา</em></h2><p>100 ข้อ · 120 นาที · สุ่มข้อสอบใหม่ทุกครั้ง</p><button class="primary-btn" id="startExam">เริ่มทำข้อสอบ <span>→</span></button></div><div class="exam-orbit"><div class="orbit-inner">04<small>MOCK</small></div></div></div><div class="exam-history"><div class="section-heading"><div><p class="eyebrow">RECENT RESULTS</p><h2>ประวัติการสอบ</h2></div></div><div class="result-row"><span class="result-icon">✓</span><div><strong>Mock Exam #03</strong><small>เมื่อวาน · 120 นาที</small></div><b class="score-high">82 / 100</b><span class="result-status">ผ่านเกณฑ์</span></div><div class="result-row"><span class="result-icon">✓</span><div><strong>ภาษาไทย — ชุดที่ 08</strong><small>24 ต.ค. 2026 · 45 นาที</small></div><b class="score-mid">74 / 100</b><span class="result-status">ผ่านเกณฑ์</span></div></div></section>
+
+        <section class="view" id="schedule"><div class="page-title"><div><p class="eyebrow">LIVE CALENDAR</p><h1>ตารางเรียนสด</h1><p class="subheading">วางแผนเวลาของคุณ แล้วเข้าเรียนได้ตรงเวลา</p></div><button class="primary-btn">เพิ่มลงปฏิทิน <span>+</span></button></div><div class="calendar-card"><div class="calendar-toolbar"><button>←</button><strong>ตุลาคม 2026</strong><button>→</button><span></span><button class="outline-btn">วันนี้</button></div><div class="calendar-grid" id="calendarGrid"></div></div></section>
+
+        <section class="view" id="analytics"><div class="page-title"><div><p class="eyebrow">PERFORMANCE LAB</p><h1>วิเคราะห์ผลสอบ</h1><p class="subheading">เห็นภาพรวมที่ชัดเจน เพื่อวางแผนพัฒนาคะแนน</p></div><button class="outline-btn">ช่วง 30 วัน ˅</button></div><div class="analytics-grid"><div class="panel radar-panel"><div class="panel-heading"><div><p class="eyebrow">SUBJECT MASTERY</p><h2>ความถนัดรายวิชา</h2></div></div><div class="radar"><div class="radar-shape"></div><div class="radar-label l1">ภาษาไทย <b>86%</b></div><div class="radar-label l2">อังกฤษ <b>72%</b></div><div class="radar-label l3">กฎหมาย <b>68%</b></div><div class="radar-label l4">คณิตศาสตร์ <b>61%</b></div><div class="radar-label l5">ทั่วไป <b>79%</b></div></div></div><div class="panel bars-panel"><div class="panel-heading"><div><p class="eyebrow">SCORE TREND</p><h2>แนวโน้มคะแนน</h2></div></div><div class="bars"><span style="height:42%"><i>62</i></span><span style="height:56%"><i>70</i></span><span style="height:50%"><i>68</i></span><span style="height:68%"><i>76</i></span><span style="height:80%"><i>82</i></span><span style="height:76%"><i>78</i></span></div><div class="bar-labels"><span>ชุด 01</span><span>ชุด 02</span><span>ชุด 03</span><span>ชุด 04</span><span>ชุด 05</span><span>ชุด 06</span></div></div></div></section>
+      </main>
+    </div>
+    <div class="toast" id="toast">บันทึกความคืบหน้าแล้ว ✓</div>
+    <script src="app.js"></script>
+  </body>
+</html>
