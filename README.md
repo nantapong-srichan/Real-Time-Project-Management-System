@@ -58,46 +58,10 @@
 
 - PostgreSQL
 
-เทคโนโลยีที่ยังเป็นแผนงาน เช่น Redis และ WebSocket ยังไม่ถือเป็นส่วนที่ใช้งานจริงใน repository ปัจจุบัน
 
-## โครงสร้างโปรเจกต์
-
-```text
-.
-├── frontend/              # Next.js + React application
-│   ├── app/               # App Router pages and styles
-│   └── package.json
-├── backend/               # NestJS API application
-│   ├── prisma/            # Database schema
-│   ├── src/               # API modules and services
-│   └── package.json
-├── index.html             # Prototype เดิมสำหรับอ้างอิง UI
-├── styles.css             # Styles ของ prototype เดิม
-└── app.js                 # Interaction ของ prototype เดิม
-```
+## โครงสร้า
 
 ## วิธีติดตั้งและรันระบบ
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-เปิดที่ `http://localhost:3000`
-
-### Backend
-
-```bash
-cd backend
-cp .env.example .env
-npm install
-npx prisma generate
-npx prisma db push
-npm run start:dev
-```
 
 API จะทำงานที่ `http://localhost:4000`
 
@@ -107,7 +71,7 @@ API จะทำงานที่ `http://localhost:4000`
 GET /health
 ```
 
-## สถานะปัจจุบัน
+## สถานะ
 
 - Frontend Dashboard: มีโครงสร้างและ Interaction เบื้องต้นแล้ว
 - Next.js + React frontend: เริ่มต้นแล้ว
